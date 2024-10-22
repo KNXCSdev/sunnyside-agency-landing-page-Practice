@@ -1,0 +1,264 @@
+:root {
+  // ### Primary
+  --red: hsl(7, 93%, 60%);
+  --softred: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --yellow2: hsla(51, 100%, 49%, 0.377);
+  --darkdesaturatedcyan: hsl(167, 40%, 24%); //(graphic design text)
+  --darkblue: hsl(198, 62%, 26%); //(photography text)
+  --darkmoderatecyan: hsl(168, 34%, 41%); //(footer)
+
+  //### Neutral
+
+  --verydarkdesaturatedblue: hsl(212, 27%, 19%);
+  --verydarkgrayishblue: hsl(213, 9%, 39%);
+  --darkgrayishblue: hsl(232, 10%, 55%);
+  --grayishblue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+
+  --frau: "Fraunces", sans-serif;
+  --bar: "Barlow", sans-serif;
+}
+
+// ### Font
+
+// - Family: [Barlow](https://fonts.google.com/specimen/Barlow)
+// - Weights: 600
+// - Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+// - Weights: 700, 900
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+  font-size: 1.6rem;
+  font-family: "Barlow", sans-serif;
+}
+
+//SECTION REUSABLE
+
+.primary-heading {
+  font-size: 6.4rem;
+  font-weight: 800;
+  color: var(--white);
+  font-family: var(--frau);
+  margin-bottom: 10rem;
+  letter-spacing: 10px;
+}
+
+.secondary-heading {
+  font-size: 6.4rem;
+  font-weight: 800;
+  font-family: var(--frau);
+  margin-bottom: 4rem;
+  color: var(--verydarkdesaturatedblue);
+}
+
+.tertiary-heading {
+  margin-top: 40%;
+  text-align: center;
+  font-size: 4rem;
+  color: var(--darkdesaturatedcyan);
+  margin-bottom: 3rem;
+  font-family: var(--frau);
+}
+
+.fourth-heading {
+}
+
+.bg {
+  background-image: url("/images/desktop/image-header.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+//SECTION NAV
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 4rem;
+  margin-bottom: 12rem;
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: var(--white);
+    padding: 1rem 2rem;
+  }
+
+  &__link--white:link,
+  &__link--white:visited {
+    font-size: 1.4rem;
+    font-family: "Fraunces", sans-serif;
+    background-color: var(--white);
+    color: var(--verydarkdesaturatedblue) !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 100px;
+    &:hover,
+    &:active {
+      background-color: rgba(131, 255, 255, 0.233);
+      color: var(--white) !important;
+    }
+  }
+}
+
+//SECTION HERO
+.hero {
+  text-align: center;
+}
+
+//SECTION PRODUCTS
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  &__block {
+    padding: 15rem 15rem 5rem 15rem;
+    height: 75vh;
+
+    &--1,
+    &--2,
+    &--3,
+    &--4,
+    &--5,
+    &--6 {
+      background-size: cover;
+      background-position: center;
+    }
+
+    &--1 {
+    }
+
+    &--2 {
+      background-image: url(/images/desktop/image-transform.jpg);
+    }
+
+    &--3 {
+      background-image: url(/images/desktop/image-stand-out.jpg);
+    }
+
+    &--4 {
+    }
+
+    &--5 {
+      background-image: url(/images/desktop/image-graphic-design.jpg);
+      text-align: center;
+      color: var(--darkmoderatecyan);
+    }
+
+    &--6 {
+      background-image: url(/images/desktop/image-photography.jpg);
+      text-align: center;
+      color: var(--darkmoderatecyan);
+    }
+  }
+
+  &__description {
+    font-size: 2.6rem;
+    line-height: 1.4;
+    color: var(--verydarkgrayishblue);
+    margin-bottom: 4rem;
+
+    &--2 {
+      font-size: 2rem;
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    font-family: var(--frau);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    position: relative;
+    color: var(--verydarkdesaturatedblue);
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 12px;
+      border-radius: 10px;
+      z-index: -1;
+      transform: scaleX(1);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  &__link--yellow:link {
+    &::after {
+      background-color: var(--yellow2);
+    }
+
+    &:hover::after {
+      background-color: var(--yellow);
+    }
+  }
+
+  &__link--red:link {
+    &::after {
+      background-color: var(--softred); /* Color of the underline */
+    }
+
+    &:hover::after {
+      background-color: var(--red);
+    }
+  }
+}
+
+// <section class="products">
+// <div class="products__block">
+//   <h2 class="secondary-heading">Transform your brand</h2>
+//   <p class="products__description">
+//     We are a full-service creative agency specializing in helping brands grow fast. Engage
+//     your clients through compelling visuals that do most of the marketing for you.
+//   </p>
+
+//   <a href="#" class="products__link products__link--yellow">Learn More</a>
+// </div>
+// <div class="products__block">&nbsp;</div>
+// <div class="products__block">&nbsp;</div>
+// <div class="products__block">
+//   <h2 class="secondary-heading">Stand out to the right audience</h2>
+//   <p class="products__description">
+//     Using a collaborative formula of designers, researchers, photographers, videographers,
+//     and copywriters, we’ll build and extend your brand in digital places.
+//   </p>
+
+//   <a href="#" class="products__link products__link--red">Learn More</a>
+// </div>
+// <div class="products__block">
+//   <h3 class="tertiary-heading">Graphic Design</h3>
+//   <p class="products__description">
+//     Great design makes you memorable. We deliver artwork that underscores your brand message
+//     and captures potential clients’ attention.
+//   </p>
+// </div>
+// <div class="products__block">
+//   <h3 class="tertiary-heading">Photography</h3>
+//   <p class="products__description">
+//     Increase your credibility by getting the most stunning, high-quality photos that improve
+//     your business image.
+//   </p>
+// </div>
+// </section>
