@@ -249,15 +249,15 @@ body {
 
   &__img {
     border-radius: 50%;
-    width: 10rem;
-    height: 10rem;
-    margin-bottom: 5rem;
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 4rem;
   }
 
   &__quote {
     font-size: 2.4rem;
     color: var(--verydarkgrayishblue);
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 
   &__author {
@@ -322,7 +322,6 @@ body {
   }
 
   &__img {
-    display: inline;
     transition: all 0.3s;
   }
 

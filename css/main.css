@@ -202,14 +202,14 @@ body {
 }
 .testimonial__img {
   border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
-  margin-bottom: 5rem;
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 4rem;
 }
 .testimonial__quote {
   font-size: 2.4rem;
   color: var(--verydarkgrayishblue);
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 .testimonial__author {
   font-family: var(--frau);
@@ -262,7 +262,6 @@ body {
   gap: 3rem;
 }
 .footer__img {
-  display: inline;
   transition: all 0.3s;
 }
 .footer__img:hover {
