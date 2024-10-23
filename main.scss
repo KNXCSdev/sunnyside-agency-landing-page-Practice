@@ -7,6 +7,7 @@
   --darkdesaturatedcyan: hsl(167, 40%, 24%); //(graphic design text)
   --darkblue: hsl(198, 62%, 26%); //(photography text)
   --darkmoderatecyan: hsl(168, 34%, 41%); //(footer)
+  --darkmoderatecyan2: hsla(167, 31%, 41%, 0.555); //(footer)
 
   //### Neutral
 
@@ -72,6 +73,13 @@ body {
 }
 
 .fourth-heading {
+  text-align: center;
+  color: var(--grayishblue);
+  font-family: var(--frau);
+  font-size: 2.8rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
 }
 
 .bg {
@@ -143,18 +151,12 @@ body {
       background-position: center;
     }
 
-    &--1 {
-    }
-
     &--2 {
       background-image: url(/images/desktop/image-transform.jpg);
     }
 
     &--3 {
       background-image: url(/images/desktop/image-stand-out.jpg);
-    }
-
-    &--4 {
     }
 
     &--5 {
@@ -201,7 +203,6 @@ body {
       border-radius: 10px;
       z-index: -1;
       transform: scaleX(1);
-      transition: transform 0.3s ease-in-out;
     }
   }
 
@@ -212,6 +213,7 @@ body {
 
     &:hover::after {
       background-color: var(--yellow);
+      transition: all 0.3s;
     }
   }
 
@@ -222,43 +224,109 @@ body {
 
     &:hover::after {
       background-color: var(--red);
+      transition: all 0.3s;
     }
   }
 }
 
-// <section class="products">
-// <div class="products__block">
-//   <h2 class="secondary-heading">Transform your brand</h2>
-//   <p class="products__description">
-//     We are a full-service creative agency specializing in helping brands grow fast. Engage
-//     your clients through compelling visuals that do most of the marketing for you.
-//   </p>
+//SECTION TESTIMONIALS
+.testimonials {
+  padding: 16rem 0;
+  max-width: 160rem;
+  margin: 0 auto;
 
-//   <a href="#" class="products__link products__link--yellow">Learn More</a>
-// </div>
-// <div class="products__block">&nbsp;</div>
-// <div class="products__block">&nbsp;</div>
-// <div class="products__block">
-//   <h2 class="secondary-heading">Stand out to the right audience</h2>
-//   <p class="products__description">
-//     Using a collaborative formula of designers, researchers, photographers, videographers,
-//     and copywriters, we’ll build and extend your brand in digital places.
-//   </p>
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+}
 
-//   <a href="#" class="products__link products__link--red">Learn More</a>
-// </div>
-// <div class="products__block">
-//   <h3 class="tertiary-heading">Graphic Design</h3>
-//   <p class="products__description">
-//     Great design makes you memorable. We deliver artwork that underscores your brand message
-//     and captures potential clients’ attention.
-//   </p>
-// </div>
-// <div class="products__block">
-//   <h3 class="tertiary-heading">Photography</h3>
-//   <p class="products__description">
-//     Increase your credibility by getting the most stunning, high-quality photos that improve
-//     your business image.
-//   </p>
-// </div>
-// </section>
+.testimonial {
+  text-align: center;
+  line-height: 1.6;
+
+  &__img {
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 5rem;
+  }
+
+  &__quote {
+    font-size: 2.4rem;
+    color: var(--verydarkgrayishblue);
+    margin-bottom: 5rem;
+  }
+
+  &__author {
+    font-family: var(--frau);
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  &__job {
+    font-weight: 500;
+    color: var(--grayishblue);
+  }
+}
+
+//SECTION GALLERY
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  height: 70vh;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//SECTION FOOTER
+.footer {
+  padding: 6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: rgb(94, 161, 156);
+  &__logo {
+    margin-bottom: 2rem;
+  }
+
+  &__links {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 7rem;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: var(--darkdesaturatedcyan);
+    transition: all 0.3s;
+    &:hover,
+    &:active {
+      color: var(--white);
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 3rem;
+  }
+
+  &__img {
+    display: inline;
+    transition: all 0.3s;
+  }
+
+  &__img:hover {
+    filter: brightness(0) invert(1);
+  }
+}
