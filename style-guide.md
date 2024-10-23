@@ -13,12 +13,6 @@ The designs were created to the following widths:
 
 ## Typography
 
-### Body Copy
-
-- Font size: 18px
-
-## Icons
-
 We provide the required social icons. But, if you prefer, you can use a font icon library. Some suggestions can be found below:
 
 - [Font Awesome](https://fontawesome.com)
